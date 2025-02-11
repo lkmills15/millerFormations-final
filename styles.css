@@ -51,7 +51,13 @@ textarea{
     margin: 0 auto;
     overflow-x: hidden;
     padding: 0 2rem;
+   
     
+}
+
+.navbar{
+    position: relative;
+    z-index: 10;
 }
 
 .navbar__container{
@@ -60,6 +66,8 @@ textarea{
  justify-content: center;
  align-items: center;
  justify-content: flex-end;
+
+ 
 }
 
 
@@ -99,13 +107,15 @@ textarea{
     background: #262431;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: -3rem;
+    right: -3rem;
+    bottom: -3rem;
     padding: 3rem 0;
     text-align: center;
     height: 40vh;
-    transform: translateX(-100%) ;
+    transform: translateX(-200%) ;
     transition: 0.3s ease-in-out;
+    overflow: visible;
 }
 
 .navbar__mobile-menu.active{
@@ -316,6 +326,14 @@ transform:translateX(0);
 }
 
 
+
+
+
+@media only screen and (min-width: 960px){
+.navbar__mobile-menu{display:none!important}
+}
+
+
 @media(max-width: 1039px){
     #services__card-mobile{
         display: none;
@@ -376,7 +394,9 @@ transform:translateX(0);
         font-size: 2rem;
     }
 
-  
+  .hero{
+    z-index: 1;
+  }
 
  
     .services__card p{
